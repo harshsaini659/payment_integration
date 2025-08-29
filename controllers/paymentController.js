@@ -2,7 +2,7 @@ const { APIContracts, APIControllers } = require('authorizenet');
 const { getMerchantAuth } = require('../utils/authorizeNet');
 
 exports.makePayment = (req, res) => {
-  let merchantAuthenticationType = getMerchantAuth();
+  let merchantAuthenticationType = getMerchantAuth();  //yaha merchant check ho raha hai ki ye valid hai ya nahi
 
   // Test card details (abhi hardcoded, baad me req.body se aayenge)
   let creditCard = new APIContracts.CreditCardType();
